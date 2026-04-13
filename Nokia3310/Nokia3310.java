@@ -51,6 +51,7 @@ public class Nokia3310 {
         String securitySetting = "1. Pin code request 2. Call barring services 3. Fixed dialing 4. Closed user group 5. Phone security 6. Change access code";
 
         String clockMenu = "1. Alarm clock 2. Clock settings 3. Date settings 4. Stopwatch 5. Count down timer 6. Auto update of date & time";
+        
 
         int subMenuChoice;
 
@@ -65,6 +66,10 @@ public class Nokia3310 {
                 if (subMenuChoice == 8) {
                     System.out.println("\n" + phoneOptions);
                     System.out.print("Enter option:");
+                    subMenuChoice = input.nextInt(); 
+                    System.out.println(phoneOptions);
+                    
+                    
                 } else return;
                 break;
 
@@ -105,12 +110,15 @@ public class Nokia3310 {
                 System.out.println("\nTones");
                 System.out.println(toneSettings);
                 System.out.print("Enter choice:");
+                subMenuChoice = input.nextInt();
                 break;
 
             case 6:
                 System.out.println("\nSettings");
                 System.out.println(menuSettings);
                 System.out.print("Enter choice:");
+                subMenuChoice = input.nextInt(); 
+                System.out.print(securitySetting);
                 subMenuChoice = input.nextInt(); 
                 break;
 
