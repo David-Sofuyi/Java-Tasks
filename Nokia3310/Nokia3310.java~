@@ -2,35 +2,146 @@ import java.util.Scanner;
 
 public class Nokia3310 {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        String[] menuMap = {
-            "1. Phonebook",
-            "2. Messages",
-            "3. Chat",
-            "4. Call Registers",
-            "5. Tones",
-            "6. Settings",
-            "7. Call Divert",
-            "8. Games",
-            "9. Calculator",
-            "10. Reminders",
-            "11. Clock",
-            "12. Profiles",
-            "13. Sim Services",
-        };
-        System.out.println("1. Phonebook",
-            "2. Messages",
-            "3. Chat",
-            "4. Call Registers",
-            "5. Tones",
-            "6. Settings",
-            "7. Call Divert",
-            "8. Games",
-            "9. Calculator",
-            "10. Reminders",
-            "11. Clock",
-            "12. Profiles",
-            "13. Sim Services");
+        System.out.printf("""
+                    Menu
+            1.  Phonebook
+            2.  Messages
+            3.  Chat
+            4.  Call Registers
+            5.  Tones
+            6.  Settings
+            7.  Call Divert
+            8.  Games
+            9.  Calculator
+            10. Reminders
+            11. Clock
+            12. Profiles
+            13. Sim Services
+            """);
+
+        int menuChoice = input.nextInt();
+
+        String phoneBookMenu = "1. Search 2. Search nos 3. Add Name 4. Erase 5. Edit 6. Assign tone 7. Send b'card 8. options 9. Speed dials 10. voice tags 0 = back";
+
+        String phoneOptions = "1. Type of view 2. Memory status";
+
+        String menuMessages = "1.Write messages 2. Inbox 3. Outbox 4. Picture Message 5. Templates 6. Smileys 7. Messages settings 8. Info services 9. Voicemail box number 10. Service command editor";
+
+        String messageSettings = "1.Message center number 2. Message sent as 3. Message validility 4. Delivery report 5. Reply via same center 6. Character support";
+
+        String callRegisters = "1.Missed calls 2. Received calls 3. Dialled Numbers 4. Erase recent call list 5. Show call duration 6. Show call cost 7 . Call cost setting 8. Prepaid credit";
+
+        String callDuration = "1.Last call duration 2. All call duration 3. Received call duration 4. Dialled call duration 5. Clear timers";
+
+        String callCost = "1.Last call costs 2. All call cost 3. Clear counters";
+
+        String callCostSetting = "1.Call cost limit 2. Show costs in ";
+
+        String toneSettings = "1. Ringing tone 2. Ringing volume 3. Incoming call alert 4. Composer 5. Message alert tone 6. Keypad tones 7 . Warning and game tones 8. Vibrating alert 9. Screensaver";
+
+        String menuSettings = "1. Call setting 2. Phone setting 3. Security setting 4. Restore factory settings";
+
+        String callSettings = "1. Automatic redial 2. Speed dialling 3. Call waiting options 4. Own number sending 5. Phone line in use 6. Automatic answer";
+
+        String phoneSettings = "1. Language 2. Call info display 3. Welcome note 4. Network selection 5. lights 6. Confirm sim service actions";
+
+        String securitySetting = "1. Pin code request 2. Call barring services 3. Fixed dialing 4. Closed user group 5. Phone security 6. Change access code";
+
+        String clockMenu = "1. Alarm clock 2. Clock settings 3. Date settings 4. Stopwatch 5. Count down timer 6. Auto update of date & time";
+
+        int subMenuChoice;
+
+        switch (menuChoice) {
+
+            case 1:
+                System.out.println("\nPhone book");
+                System.out.println(phoneBookMenu);
+                System.out.print("Enter choice:");
+                subMenuChoice = input.nextInt(); 
+
+                if (subMenuChoice == 8) {
+                    System.out.println("\n" + phoneOptions);
+                    System.out.print("Enter option:");
+                } else return;
+                break;
+
+            case 2:
+                System.out.println("\nMessages");
+                System.out.println(menuMessages);
+                System.out.print("Enter choice:");
+                subMenuChoice = input.nextInt();
+
+                if (subMenuChoice == 7) {
+                    System.out.println("\n" + messageSettings);
+                    System.out.print(messageSettings);
+                }
+                break;
+
+            case 3:
+                System.out.println("\nChat");
+                break;
+
+            case 4:
+                System.out.println("\nCall Registers");
+                System.out.println(callRegisters);
+                System.out.print("Enter choice:");
+                subMenuChoice = input.nextInt();
+
+                if (subMenuChoice == 5) {
+                    System.out.println("\n" + callDuration);
+                }
+                else if (subMenuChoice == 6) {
+                    System.out.println("\n" + callCost);
+                }
+                else if (subMenuChoice == 7) {
+                    System.out.println("\n" + callCostSetting);
+                }
+                break;
+
+            case 5:
+                System.out.println("\nTones");
+                System.out.println(toneSettings);
+                System.out.print("Enter choice:");
+                break;
+
+            case 6:
+                System.out.println("\nSettings");
+                System.out.println(menuSettings);
+                System.out.print("Enter choice:");
+                break;
+
+            case 7:
+                System.out.println("\nCall divert");
+                break;
+
+            case 8:
+                System.out.println("\nGames");
+                break;
+
+            case 9:
+                System.out.println("\nCalculator");
+                break;
+
+            case 10:
+                System.out.println("\nReminders");
+                break;
+
+            case 11:
+                System.out.println("\nClock");
+                System.out.println(clockMenu);
+                System.out.print("Enter choice:");
+                break;
+
+            case 12:
+                System.out.println("\nProfiles");
+                break;
+
+            case 13:
+                System.out.println("\nSim Services");
+                break;
+        }
     }
 }
