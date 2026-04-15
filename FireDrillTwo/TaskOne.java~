@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class TaskOne{
+    public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+System.out.print("Enter first number:");
+int num1 = input.nextInt();
+for (count = 1; count <= 10; count++)
+    }
+}
