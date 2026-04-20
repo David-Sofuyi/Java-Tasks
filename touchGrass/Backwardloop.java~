@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+public class BackwardLoop{
+    public static void main(String[] args){
+        Scanner inputCollector = new Scanner(System.in);
+        
+        
+        System.out.println("Enter a number!");
+        int number = inputCollector.nextInt();
+        
+        int count = number;
+        for(;count >= 0;){
+            System.out.println(count);
+            count--;
+            System.out.println("Blast off!");
+        }
+    }
+}
