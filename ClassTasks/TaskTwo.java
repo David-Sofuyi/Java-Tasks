@@ -11,7 +11,7 @@ public class TaskTwo{
         for(int out = 0; out < array.length; out++){
  // System.out.println(array[out] + " ");
        int value = array [out];
-       System.out.print(value);
+       System.out.print(value + " ");
      }
     }        
 }
