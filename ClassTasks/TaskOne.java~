@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class TaskOne{
+    public static void main(String [] args){
+     int [] numbers = new number[10];
+        Scanner inputCollector = new Scanner(System.in);
+        System.out.print=("enter your numbers");
+        int number = inputCollector.nextInt();
+        
+        
+    }
+}

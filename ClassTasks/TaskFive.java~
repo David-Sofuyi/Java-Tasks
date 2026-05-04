@@ -1,0 +1,25 @@
+import java.util.array;
+public class TaskFive{
+public static int[] getEvenIndexElements(int[] arr) {
+    if (arr == null || arr.length == 0) {
+        return new int[0];
+    }
+
+    int resultSize = (arr.length + 1) / 2;
+    int[] result = new int[resultSize];
+
+    int resultIndex = 0;
+    for (int i = 0; i < arr.length; i += 3) {
+        result[resultIndex] = arr[i];
+        resultIndex++;
+    }
+
+    return result;
+}
+
+public static void main [String [] arg]{
+int [] numbers = {6,16,3,33,11,4,8,9};
+
+System.out.println(Arrays.toString(number(numbers)));
+}
+}

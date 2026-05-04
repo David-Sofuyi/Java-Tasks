@@ -1,0 +1,32 @@
+public class TaskSix{
+public static void getEvenIndexElements(int[] arr) {
+
+    if (arr == null || arr.length == 0) {
+        return int[];
+    }
+
+    int resultSize = (arr.length + 1) / 2;
+    int[] result = new int[resultSize];
+
+    int resultIndex = 0;
+    for (int i = 0; i < arr.length; i += 2) {
+        result[resultIndex] = arr[i];
+        resultIndex++;
+    }
+
+    return result;
+}
+}
+
+ public static void main(String[] args) {
+ int[] array = {6,16,3,33,11,4,8,9};
+ int total = 0; 
+ for (int counter = 0; counter < array.length; counter++) {
+ 
+ } 
+
+System.out.print("Total of even array elements: " total);
+ } 
+ 
+
+
