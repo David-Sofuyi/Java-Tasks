@@ -20,6 +20,6 @@ public static int[] getEvenIndexElements(int[] arr) {
 public static void main (String [] arg){
 int [] numbers = {6,16,3,33,11,4,8,9};
 
-System.out.println(Arrays.toString(number(numbers)));
+System.out.println(Arrays.toString(numbers));
 }
 }
