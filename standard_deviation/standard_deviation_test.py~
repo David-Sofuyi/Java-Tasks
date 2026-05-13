@@ -1,15 +1,8 @@
-import unittest
+from unittest import Testcase
 
-from standard_deviation import (
-    calculate_sum,
-    mean,
-    variance,
-    standard_deviation,
-    mean_deviation
-)
+from standard_deviation import *
 
-
-class StandardDeviationTest(unittest.TestCase):
+class StandardDeviationTest(TestCase):
 
     def setUp(self):
         self.numbers = [2, 4, 4, 4, 5, 5, 7, 9]
