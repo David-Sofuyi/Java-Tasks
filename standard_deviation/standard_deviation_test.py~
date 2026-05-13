@@ -1,0 +1,57 @@
+import unittest
+
+from standard_deviation import (
+    calculate_sum,
+    mean,
+    variance,
+    standard_deviation,
+    mean_deviation
+)
+
+
+class StandardDeviationTest(unittest.TestCase):
+
+    def setUp(self):
+        self.numbers = [2, 4, 4, 4, 5, 5, 7, 9]
+
+    def test_sum(self):
+        self.assertAlmostEqual(
+            calculate_sum(self.numbers),
+            40.0,
+            places=3
+        )
+
+    def test_mean(self):
+        self.assertAlmostEqual(
+            mean(self.numbers),
+            5.0,
+            places=3
+        )
+
+    def test_variance(self):
+        self.assertAlmostEqual(
+            variance(self.numbers),
+            4.0,
+            places=3
+        )
+
+    def test_standard_deviation(self):
+        self.assertAlmostEqual(
+            standard_deviation(self.numbers),
+            2.0,
+            places=3
+        )
+
+    def test_mean_deviation(self):
+        self.assertAlmostEqual(
+            mean_deviation(self.numbers),
+            1.5,
+            places=3
+        )
+
+
+def main():
+    unittest.main()
+
+
+main()

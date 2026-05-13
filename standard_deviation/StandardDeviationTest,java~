@@ -1,0 +1,37 @@
+public class StandardDeviationTest {
+
+    public static void main(String[] args) {
+
+        double[] numbers = {2, 4, 4, 4, 5, 5, 7, 9};
+
+        System.out.println("=== TEST RESULTS ===");
+
+        System.out.println("Expected Sum: 40");
+        System.out.println("Actual Sum: " +
+                StandardDeviation.sum(numbers));
+
+        System.out.println();
+
+        System.out.println("Expected Mean: 5");
+        System.out.println("Actual Mean: " +
+                StandardDeviation.mean(numbers));
+
+        System.out.println();
+
+        System.out.println("Expected Variance: 4");
+        System.out.println("Actual Variance: " +
+                StandardDeviation.variance(numbers));
+
+        System.out.println();
+
+        System.out.println("Expected Standard Deviation: 2");
+        System.out.println("Actual Standard Deviation: " +
+                StandardDeviation.standardDeviation(numbers));
+
+        System.out.println();
+
+        System.out.println("Expected Mean Deviation: 1.5");
+        System.out.println("Actual Mean Deviation: " +
+                StandardDeviation.meanDeviation(numbers));
+    }
+}
